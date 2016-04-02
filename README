@@ -1,0 +1,39 @@
+         File: QScopeV2_0.zip
+       Author: cbauer@iphcip1.physik.uni-mainz.de (Christian Bauer)
+      Release: 2.0 (21.May 1998)
+Compatibility: R3 PPC/x86
+     Location: contrib/audio
+  Description: Triggered oscilloscope
+        Notes:
+
+This program is a digital oscilloscope for the ADC and DAC sound
+streams. It's usage should be fairly obvious for those of you familiar
+with real-world oscilloscopes:
+
+"Input" group:
+
+  "Stream" : Selects between monitoring the ADC or the DAC stream
+  "Channel": Chooses the left or right channel for display, or a
+             dual-channel display
+
+"Time" group:
+
+  "Time/Div.": Sets the time equivalent to one horizontal division
+               on the scope grid
+
+"Trigger" group:
+
+  "Channel"     : Selects which channel is used for the trigger
+  "Trigger Mode": Possible choices are:
+                  "Off" - no triggering
+                  "Level" - normal triggering (settable level and slope)
+                  "Peak" - automatic peak detection
+  "Level"       : Trigger level (not used for peak trigger mode)
+  "Slope"       : Trigger slope (not used for peak trigger mode)
+  "Hold Off"    : Time to wait before retriggering (used to make the
+                  display stable if it jitters)
+
+"Illumination": Turn on backlight
+
+If no trigger signal is detected after 1/30 of a second, the beam is
+restarted. Signals <30Hz therefore usually cannot be triggered reliably.
