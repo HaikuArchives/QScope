@@ -8,6 +8,8 @@
 #include <InterfaceKit.h>
 #include <MediaKit.h>
 
+#include "OldAudioStream.h"
+#include "OldSubscriber.h"
 #include "TSliderView.h"
 
 
@@ -484,7 +486,7 @@ void DrawLooper::MessageReceived(BMessage *msg)
 			MessageQueue()->Unlock();
 
 			// Get pointer to data buffer
-			if (msg->FindPointer("buffer", &buf) != B_NO_ERROR)
+			if (msg->FindPointer("buffer", (void**) &buf) != B_NO_ERROR)
 				break;
 
 			// Draw dark green background
